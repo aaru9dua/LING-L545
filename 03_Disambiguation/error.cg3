@@ -1,0 +1,37 @@
+# This is an example Constraint Grammar rules file.
+
+# There is no built-in manual yet. Resources:
+# http://visl.sdu.dk/cg3.html
+# http://groups.google.com/group/constraint-grammar
+# http://kevindonnelly.org.uk/2010/05/constraint-grammar-tutorial/
+
+# Firstly, we need to define what tags should be considered sentence delimiters. For this example, only full stop is set as delimiter.
+
+DELIMITERS = "." ;
+
+LIST FINITE = VerbForm=Fin;
+LIST PREP =ADP;
+LIST INF = VerbForm=Inf;
+LIST THE = "the" ;
+LIST MODAL = "will" "would" "could";
+LIST AUX = "was" "were" "had" "have" ;
+LIST PRON = PRON;
+LIST NOUN = NOUN;
+LIST ADJ = ADJ;
+LIST PP = VerbForm=Part;
+LIST FP = Person=1 ;
+LIST V = VERB ;
+
+SET VFP = V + FP;
+
+SECTION
+
+REMOVE FINITE IF (-1 THE) ;
+
+REMOVE INF IF (NOT -1 PREP OR MODAL);
+
+REMOVE PP IF (NOT -1 AUX);
+
+REMOVE V + FP IF (NOT -1 FP);
+
+
