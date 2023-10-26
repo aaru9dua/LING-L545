@@ -1,0 +1,54 @@
+Multichar_Symbols
+
+%> ! Morpheme boundary
+
+%<n%> ! Noun
+%<pl%> ! Plural
+%<m%> ! Masculine type 1
+%<f1%> ! Feminine type 1
+%<f2%> ! Feminine type 2
+
+%{A%}
+%{iya%}
+%{Ah%}
+
+LEXICON Root
+Nouns ;
+
+LEXICON N1
+%<n%>%<m%>%<sg%>: CASE ;
+%<n%>%<m%>%<pl%>:%>%{A%} CASE ;
+
+LEXICON N2
+%<n%>%<m%>%<sg%>: CASE ;
+%<n%>%<m%>%<pl%>: CASE ;
+
+LEXICON F1
+%<n%>%<m%>%<sg%>: CASE ;
+%<n%>%<m%>%<pl%>:%>%{iya%} CASE ;
+
+LEXICON F2
+%<n%>%<m%>%<sg%>: CASE ;
+%<n%>%<m%>%<pl%>:%>ें	CASE ;
+
+LEXICON CASE
+# ; 
+
+LEXICON Nouns
+
+! Masculine type 1
+लड़का:लड़का N1; ! "Boy"
+कुरता:कुरता N1;  ! "Male Dress"
+
+! Masculine type 2
+आम:आम N2; ! "Mango"
+गाँव:गाँव N2;  ! "Village"
+
+!Feminine type 1
+लड़्की:लड़्की F1; ! "Girl"
+साड़ी:साड़ी F1;   ! "Female Dress"
+
+!Feminine type 2
+औरत:औरत F2;  ! "Woman"
+बस:बस   F2;  ! "Bus"
+

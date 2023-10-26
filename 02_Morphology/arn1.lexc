@@ -1,0 +1,32 @@
+Multichar_Symbols
+
+%<n%>       ! Nombre
+%<cmp%>     ! Composición
+%<2n%>      ! Two Nouns
+%<3n%>      ! Three Nouns
+%>          ! Frontera de morfema
+%+          ! Frontera de palabras compuestas (forma léxica)
+%#          ! Frontera de palabras compuestas (forma superficial)
+
+
+LEXICON Root
+
+Nouns  ;
+
+LEXICON Cmp
+
+%<cmp%>%2n:%# Nouns ;   ! Compound with two nouns
+%<cmp%>%3n:%# Nouns ;   ! Compound with three nouns
+
+LEXICON N
+
+%<n%>:%2n Cmp ;  ! Link to compound with two nouns
+%<n%>:%3n Cmp ;  ! Link to compound with three nouns
+%<n%>: # ;
+
+LEXICON Nouns
+
+mapu:mapu N ; !"tierra, land"
+che:che N ; ! "gente, people"
+mamüll:mamüll N ; ! "madera, wood"
+wangku:wangku N ; ! "silla, chair"

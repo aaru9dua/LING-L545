@@ -1,0 +1,13 @@
+
+
+"Change vowel to tonal before the atonal suffix"
+Va:Vt <=> _ %>: %{m%}: e: ;
+          where Va in VowsAton 
+                Vt in VowsTon 
+          matched;
+
+"Surface [n] in plural nouns"
+%{n%}:n <=> Nas: %>: _ ;
+
+"Surface [g] in pl nouns after nasals"
+%{g%}:g <=> %{n%}:n _ ;

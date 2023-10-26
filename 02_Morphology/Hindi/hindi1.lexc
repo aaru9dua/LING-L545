@@ -1,0 +1,52 @@
+Multichar_Symbols
+
+%> ! Morpheme boundary
+
+%<n%> ! Noun
+%<adj%> !adjective suffix
+
+%<cmp%>                 ! Composition 
+
+%>                      ! Morpheme boundary
+%+                      ! Compound boundary (lexical form)
+%#                      ! Compound boundary (surface form)
+
+
+LEXICON Root
+
+Nouns ;
+
+LEXICON N
+%<n%>: SUFF_CASE ;
+
+LEXICON N1
+%<n%>: PREF_CASE ;
+
+LEXICON Cmp
+%<cmp%>%+:%# Nouns;
+
+LEXICON C
+%<n%>:%> Cmp ;
+%<n%>: # ;
+
+LEXICON SUFF_CASE
+%<adj%>:%>वान #; ! "suffix- (-full)"
+# ;
+
+LEXICON PREF_CASE
+%<n1%>:%>अति ! fix
+# ;
+
+LEXICON Nouns
+
+धन:धन N ; ! "Money"
+बल:बल N ; ! "Power"
+गुण:गुण N ;  ! "skill"
+ज्ञान:ज्ञान N ; ! "knowledge"
+
+
+राज:राज C ; ! "Rule"
+महल:महल C ;  ! "Palace"
+जन:जन C; ! "Public"
+धन:धन C; ! "Money"
+

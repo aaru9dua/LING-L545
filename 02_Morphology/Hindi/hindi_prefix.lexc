@@ -1,0 +1,24 @@
+Multichar_Symbols
+
+%> ! Morpheme boundary
+
+%<n%> ! Noun
+@P.Neg.1@
+@R.Neg.1@
+
+LEXICON Root
+
+Nouns ;
+Prefix;
+
+LEXICON N
+%<n%>: # ;
+@R.Neg.1@%<n%>: @R.Neg.1@ # ;
+
+LEXICON Nouns
+
+प्रिय:प्रिय N ; ! "love"
+
+LEXICON Prefix
+@P.Neg.1@:@P.Neg.1@अति%> Nouns;
+
