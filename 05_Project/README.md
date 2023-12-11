@@ -21,7 +21,7 @@
 
 <p>Use the Jupyter notebook "automated-vyakaran-correction.ipynb" for the VyakaranCorrection system.</p>
 
-<p>The fine-tuned BERT model weights are available in the Model_save directory. The model can be loaded as follows:</p>
+<p>The fine-tuned BERT model weights are available in the Model_save directory (https://drive.google.com/drive/folders/1loTmwrcg_Mvrc2KIdcgfpB6cBHmM3xZD?usp=share_link). The model can be loaded as follows:</p>
 
 <pre>
 <code>
